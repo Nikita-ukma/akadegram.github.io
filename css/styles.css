@@ -1,0 +1,288 @@
+body {
+    font-family: Corbel;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.logo-container {
+    height: 100%;
+    width: 100%;
+}
+.logo {
+    min-width: 200px;
+    min-height: 40px;
+}
+.sidebar {
+    position: fixed; /* Фіксує панель на екрані */
+    top: 0;
+    left: 0;
+    width: 80px; /* Ширина бокової панелі */
+    height: 90%; /* Панель на всю висоту екрану */
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px 0;
+    margin-left: 10%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-icon {
+    margin: 15px 0;
+    width: 40px;
+    height: 40px;
+}
+
+.nav-icon img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+[data-tooltip] {
+    position: relative;
+    cursor: pointer;
+}
+
+[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    opacity: 0;
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+[data-tooltip]:hover::after {
+    opacity: 1;
+}
+
+/* Розміщення підказок */
+.sidebar .nav-icon[data-tooltip]::after {
+    top: 50%;
+    left: 100%;
+    transform: translate(10px, -50%);
+}
+
+.interests img[data-tooltip]::after {
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 10px);
+}
+
+.nav-icon img, .interests img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавний перехід для анімації */
+}
+
+.nav-icon img:hover, .interests img:hover {
+    transform: scale(1.1); /* Збільшує іконку на 10% */
+
+}
+
+.container {
+    width: 65%; 
+    max-width: 1200px; 
+    background-color: #f4f4f4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 15px; 
+    padding: 20px; 
+}
+
+.profile, .friends, .photo-gallery {
+    background-color: white;
+    border-radius: 15px; 
+    margin-bottom: 20px; 
+    padding: 20px; 
+}
+
+header {
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 15px; 
+    margin-bottom: 20px;
+}
+
+.profile {
+    display: flex;
+    align-items: flex-start;
+    padding: 24px;
+    background-color: white;
+    color: black;
+    border-radius: 15px; 
+}
+
+.profile-pic {
+    margin-right: 20px; 
+    border-radius: 50%; 
+}
+
+profile-pic img {
+    border-radius: 50%; 
+    width: 200px; 
+    height: 200px;
+    object-fit: cover;
+}
+
+.profile-info {
+    padding: 12px;
+    flex: 1; 
+}
+
+.profile-info h1, .profile-info h2 {
+    margin: 5px 0;
+}
+.profile-info h1 {
+    font-size: 32px;
+}
+.heart-icon {
+    width: 32px;
+    height: 28px;
+    cursor: pointer;
+    margin-top: -10px;
+    margin-left: 72%;
+    vertical-align: middle; /* Вирівнює іконку по центру тексту */
+}
+.profile-info p {
+    margin-top: 10px;
+}
+.profile-bar {
+    display: flex;
+}
+.hobbies {
+    margin-top: 10px;
+    background-color: #00bf63;
+    color: white;
+  
+    align-items: center;
+    justify-content: center; 
+    border-radius: 15px; 
+    padding: 8px;
+    width: 30%;
+    text-align: center; 
+}
+
+.favorite-quote {
+    margin-left: 10px;
+    margin-top: 8px;
+    background-color: #009fb8;
+    color: white;
+    align-items: center;
+    justify-content: center; 
+    border-radius: 15px; 
+    padding: 10px 10px 10px 10px;
+    width: 62%;
+    text-align: left; 
+    font-style: italic;
+}
+.favorite-quote h2{
+    background-color: #009fb8;
+    color: white;
+    align-items: center;
+    justify-content: center; 
+    border-radius: 15px; 
+    text-align: left; 
+    font-style: normal;
+}
+
+.interests {
+    align-items: center;
+    justify-content: center; 
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.interests img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+}
+
+.friends {
+    padding: 20px;
+    background-color: white;
+    color: #333;
+    border-radius: 15px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logo-container .logo {
+    width: 50px; 
+    height: auto; 
+}
+
+.friends ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.friends li {
+    margin: 10px 0;
+}
+
+.highlight {
+    display: inline-block;
+    transition: color 0.2s ease, transform 0.2s ease;
+    cursor: pointer; /* Змінює курсор на руку */
+}
+
+.highlight:hover {
+    color: #00bf63; /* Колір при наведенні */
+    transform: scale(1.01); /* Збільшення на 10% */
+    text-shadow: 0 0 2px; /* Легка голуба тінь */
+}
+
+.carousel-photo {
+    padding: 20px;
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+.photo-gallery {
+    padding: 20px;
+    background-color: white;
+    color: #333;
+    text-align: center;
+    border-radius: 15px; 
+}
+
+.photo-gallery .photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+footer {
+    background-color: #00bf63;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
