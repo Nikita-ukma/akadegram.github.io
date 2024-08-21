@@ -78,6 +78,7 @@
     }
 }
 
+
 body {
     font-family: Corbel;
     margin: 0;
@@ -98,6 +99,40 @@ body {
     min-width: 20%;
     min-height: 10%;
 }
+
+.nav-icon img, .interests img {
+    width: 100%;
+    max-width: 50px; /* Максимальна ширина для іконок інтересів */
+    height: auto;
+    border-radius: 10px;
+}
+
+.photo-gallery img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.logo-container .logo {
+    width: 100%;
+    height: auto;
+    max-width: 200px; /* Максимальна ширина */
+}
+.profile-pic img {
+    width: 100%;
+    max-width: 230px; /* Максимальна ширина */
+    height: auto;
+    border-radius: 50%; 
+}
+
+.nav-icon img, .interests img {
+    width: 100%;
+    max-width: 50px; /* Максимальна ширина для іконок інтересів */
+    height: auto;
+    border-radius: 10px;
+}
+
 .sidebar {
     position: fixed; /* Фіксує панель на екрані */
     top: 0;
@@ -120,11 +155,6 @@ body {
     height: 40px;
 }
 
-.nav-icon img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
 [data-tooltip] {
     position: relative;
     cursor: pointer;
@@ -210,13 +240,6 @@ header {
 .profile-pic {
     margin-right: 20px; 
     border-radius: 50%; 
-}
-
-profile-pic img {
-    border-radius: 50%; 
-    width: 200px; 
-    height: 200px;
-    object-fit: cover;
 }
 
 .profile-info {
