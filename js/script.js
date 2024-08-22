@@ -7,16 +7,20 @@ window.addEventListener('DOMContentLoaded', () => {
 
     if (getLike() === 'undefined') setLike(0);
 
-    const likeBtn = document.getElementById('likeBtn');
+    const likeBtn = document.querySelector('.heart-icon');
     updateLikeBtn();
 
     likeBtn.addEventListener('click', () => {
+        likeBtn.classList.toggle("liked");
         toogleLike();
         updateLikeBtn();
     });
 
 
     function updateLikeBtn() {
-        likeBtn.src = `images/like/${getLike() ? 'heart' : 'empty_heart'}.png`;
+        if (getLike()) likeBtn.classList.add("liked");
+        else likeBtn.classList.remove("liked");
     }
+
+    //
 });

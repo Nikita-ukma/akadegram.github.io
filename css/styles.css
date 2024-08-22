@@ -94,19 +94,19 @@ body {
 }
 
 .container {
-    width: 65%; 
-    max-width: 1200px; 
+    width: 65%;
+    max-width: 1200px;
     background-color: #f4f4f4;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-    border-radius: 15px; 
-    padding: 20px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 20px;
 }
 
 .profile, .friends, .photo-gallery {
     background-color: white;
-    border-radius: 15px; 
-    margin-bottom: 20px; 
-    padding: 20px; 
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding: 20px;
 }
 
 header {
@@ -114,7 +114,7 @@ header {
     color: black;
     text-align: center;
     padding: 10px 0;
-    border-radius: 15px; 
+    border-radius: 15px;
     margin-bottom: 20px;
 }
 
@@ -124,24 +124,24 @@ header {
     padding: 24px;
     background-color: white;
     color: black;
-    border-radius: 15px; 
+    border-radius: 15px;
 }
 
 .profile-pic {
-    margin-right: 20px; 
-    border-radius: 50%; 
+    margin-right: 20px;
+    border-radius: 50%;
 }
 
 profile-pic img {
-    border-radius: 50%; 
-    width: 200px; 
+    border-radius: 50%;
+    width: 200px;
     height: 200px;
     object-fit: cover;
 }
 
 .profile-info {
     padding: 12px;
-    flex: 1; 
+    flex: 1;
 }
 
 .profile-info h1, .profile-info h2 {
@@ -150,13 +150,40 @@ profile-pic img {
 .profile-info h1 {
     font-size: 32px;
 }
+.like-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .heart-icon {
-    width: 32px;
-    height: 28px;
+    height: 100px;
+    width: 100px;
+    background: url("../images/heart.png");
+    background-position: left;
     cursor: pointer;
-    margin-top: -10px;
-    margin-left: 72%;
-    vertical-align: middle; /* Вирівнює іконку по центру тексту */
+    position: absolute;
+}
+.heart-icon.liked {
+    animation: like-anim 0.7s steps(28) forwards;
+}
+
+@keyframes like-anim {
+    to {
+        background-position: right;
+    }
+}
+.heart-bg {
+    background: rgba(255, 192, 200, 0);
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 100ms ease;
+}
+.heart-bg:hover {
+    background: rgba(255, 192, 200, 0.7);
 }
 .profile-info p {
     margin-top: 10px;
@@ -168,13 +195,13 @@ profile-pic img {
     margin-top: 10px;
     background-color: #00bf63;
     color: white;
-  
+
     align-items: center;
-    justify-content: center; 
-    border-radius: 15px; 
+    justify-content: center;
+    border-radius: 15px;
     padding: 8px;
     width: 30%;
-    text-align: center; 
+    text-align: center;
 }
 
 .favorite-quote {
@@ -183,26 +210,26 @@ profile-pic img {
     background-color: #009fb8;
     color: white;
     align-items: center;
-    justify-content: center; 
-    border-radius: 15px; 
+    justify-content: center;
+    border-radius: 15px;
     padding: 10px 10px 10px 10px;
     width: 62%;
-    text-align: left; 
+    text-align: left;
     font-style: italic;
 }
 .favorite-quote h2{
     background-color: #009fb8;
     color: white;
     align-items: center;
-    justify-content: center; 
-    border-radius: 15px; 
-    text-align: left; 
+    justify-content: center;
+    border-radius: 15px;
+    text-align: left;
     font-style: normal;
 }
 
 .interests {
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     display: flex;
     gap: 10px;
     margin-top: 15px;
@@ -211,7 +238,7 @@ profile-pic img {
 .interests img {
     width: 50px;
     height: 50px;
-    border-radius: 50%; 
+    border-radius: 50%;
 }
 
 .friends {
@@ -229,8 +256,8 @@ profile-pic img {
 }
 
 .logo-container .logo {
-    width: 50px; 
-    height: auto; 
+    width: 50px;
+    height: auto;
 }
 
 .friends ul {
@@ -264,7 +291,7 @@ profile-pic img {
     background-color: white;
     color: #333;
     text-align: center;
-    border-radius: 15px; 
+    border-radius: 15px;
 }
 
 .photo-gallery .photos {
